@@ -55,24 +55,22 @@ class Basket extends React.Component {
             <div class="row card-header-row">		     
               <div class="col-12 col-sm-6  col-md-6  col-lg-6 limited-col-right" >
                 <div class="row item">
-                  <div class="col-1 col-sm-1  col-md-1  col-lg-1" >
-                     <span class="row-basket-icon fa fa-plus-circlea fa-cart-plus" aria-hidden="true" 
+                   <div class="col-7 col-sm-7  col-md-7  col-lg-7 item-name-col">
+                     <span style={{textAlign: 'center', width: '47px'}}class="row-basket-icon fa fa-plus-circlea fa-cart-plus" aria-hidden="true" 
                        onClick={(ev) => {store.dispatch({ type: 'ADD_BASKET_ROW' });}}
-                      ></span>
-                   </div>
-                   <div class="col-6 col-sm-6  col-md-6  col-lg-6 item-name-col">
-                	  <span class="item-name">Pick Another</span>
+                      ></span>				   
+                	  <span class="item-name">Pick</span>
                    </div>
                    <div class="col-5 col-sm-5  col-md-5  col-lg-5 d-none d-sm-none d-md-none d-lg-block item-price" ></div>
                 </div>
               </div>
               <div class="col-12 col-sm-6  col-md-6  col-lg-6 limited-col-left" >
                 <div class="row service">				    
-                  <div class="col-6 col-sm-6  col-md-6  col-lg-6" >
+                  <div class="col-6 col-sm-5  col-md-6  col-lg-6" >
                     <img class="service-img" />
                 	<span class="service-name"></span>
                   </div>
-                  <div class="col-6 col-sm-6  col-md-6  col-lg-6 item-price">{'Total : ' + this.commaCurrency(total) + ' $ '}</div>
+                  <div class="col-6 col-sm-7  col-md-6  col-lg-6 item-price">{'Total : ' + this.commaCurrency(total) + ' $ '}</div>
                 </div>
               </div>
             </div>

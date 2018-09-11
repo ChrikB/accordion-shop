@@ -13,7 +13,6 @@ class Shop extends React.Component {
 	  <div  class={isHiddenClass + 'shop-main-row'} >
 		   <div class="row">
 		     <div class="col-12  col-sm-12  col-md-12 col-lg-6 limited-col-right item-section">
-			   <h2 class='title'>Cars</h2>
 			   <div class="row brands" >
 					<ItemBrandList 
 					  itemBrandList={this.props.itemBrandList} 
@@ -39,7 +38,6 @@ class Shop extends React.Component {
 			   </div>
              </div>
 			 <div class="col-sm-12 col-md-12 col-lg-6 limited-col-left service-section">
-			   <h2 class='title'>Packages</h2>
 			   <div class="row brands">
 					<ServiceBrandList 
 					  serviceBrandList={this.props.serviceBrandList} 
@@ -59,7 +57,7 @@ class Shop extends React.Component {
 			   <button 
 			     class={hiddenButton + 'btn btn-info'} 
 				 onClick={this.exitShop}
-			   >ExitShop</button>
+			   >Exit Shop</button>
 			 </div>
 		   </div>
 	  </div>   

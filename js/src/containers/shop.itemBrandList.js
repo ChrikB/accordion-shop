@@ -4,6 +4,21 @@ class ItemBrandList extends React.Component {
 	this.itemBrandList = props.itemBrandList;
   }
   
+  componentDidMount() {
+
+	let id = '#collapseOnez' + this.props.index; 
+	  
+	$(id  + ' .brands').eq(0).on("mouseenter",function(e){
+	  e.stopPropagation(); 
+      $(id  + ' .brands .carousel-control-prev-icon1').removeClass("d-none"); 
+      $(id  + ' .brands .carousel-control-next-icon1').removeClass("d-none");  	
+	});
+	$(id  + ' .brands').eq(0).on("mouseleave",function(e){
+      $(id  + ' .brands .carousel-control-prev-icon1').addClass("d-none"); 
+      $(id  + ' .brands .carousel-control-next-icon1').addClass("d-none");  	    
+	});	  	  
+  }
+  
   
   groupThem(children,active){	 
     let cl =  active ? 'active' : '';
@@ -40,7 +55,7 @@ class ItemBrandList extends React.Component {
 
     while (components.length > 0) {
          children.push(components.shift());
-         if (children.length === 4) {
+         if (children.length === 3) {
 			 m = this.groupThem(children,active); 
              groups.push(m);
              children = [];
@@ -62,7 +77,7 @@ class ItemBrandList extends React.Component {
 		  <div class="row">		  
     		<div class="align-self-center col-2 col-sm-1 col-md-1 col-lg-1 col-xl-1 " >
     		  <a class={isHiddenClass + 'carousel-control-prev1'} href={'#' + carouselId} role="button" data-slide="prev">
-    			 <span class="carousel-control-prev-icon1 arrow-icon" aria-hidden="true" ></span>
+    			 <span class="carousel-control-prev-icon1 arrow-icon d-none" aria-hidden="true" ></span>
               </a>											
     		</div>	
 			<div class="col-8  col-sm-10 col-md-10  col-lg-10  col-xl-10">
@@ -70,7 +85,7 @@ class ItemBrandList extends React.Component {
 			</div> 
     		<div class="align-self-center col-2 col-sm-1 col-md-1 col-lg-1 col-xl-1">
     		  <a class={isHiddenClass + 'carousel-control-next1'} href={'#' + carouselId} role="button" data-slide="next" >
-    			<span class="carousel-control-next-icon1 arrow-icon" aria-hidden="true"></span>
+    			<span class="carousel-control-next-icon1 arrow-icon d-none" aria-hidden="true"></span>
               </a>					  					  
     		</div>			
 	      </div>

@@ -198,6 +198,10 @@
 .shop .carousel-control-prev-icon1 {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='RED' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
 }
+.shop .item-section,
+.shop .service-section {
+  padding-top: 12px;
+}
 .shop .item-section .title {
   padding-top: 20px;
   padding-bottom: 35px;
@@ -210,18 +214,29 @@
   padding-bottom: 10px;
 }
 .shop .item-section .brands .brand-name-cont {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .shop .item-section .brands .brand-name-cont .brand-name {
   text-align: center;
   font-weight: bold;
   text-transform: capitalize;
-  color: #716767;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  color: gray;
+  transition: color 200ms linear, background-color 200ms linear;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.shop .item-section .brands .brand-name-cont .brand-name:hover {
+  background-color: #3899c6;
+  color: white;
 }
 .shop .item-section .brands .brand-name-cont .brand-name.choosen {
-  text-decoration: underline;
-  color: #2379da;
+  background-color: #3899c6;
+  color: white;
 }
 .shop .item-section .items {
   padding-bottom: 0px;
@@ -248,7 +263,6 @@
 }
 .shop .item-section .items .item-slot .item-model {
   font-weight: bold;
-  color: gray;
   padding-top: 0px;
 }
 .shop .item-section .items .item-slot:hover {
@@ -259,12 +273,14 @@
   border-width: 0px;
   border-radius: 10px;
   padding: 2px;
+  color: gray;
 }
 .shop .item-section .items .item-slot:hover {
   border: 0px solid rgba(0, 0, 0, 0);
 }
 .shop .item-section .items .item-slot.choosen {
   border: 0px solid #3591f2;
+  color: #1ea9cf;
 }
 .shop .item-section .items .item-slot.choosen .item-view {
   border: 1px solid #3591f2;
@@ -315,19 +331,22 @@
   MARGIN: AUTO;
 }
 .shop .item-section .colors .outer-dot {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+  border-radius: 0px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0);
+  transform: skew(-20deg, 0deg);
+  padding: 0px;
+  transform: skew(20deg, 0deg);
+  width: 35px;
+  height: 50px;
 }
 .shop .item-section .colors .outer-dot .dot {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
+  border-radius: 0px;
   display: inline-block;
   MARGIN: AUTO;
   border: 2px solid #4d4b4b;
+  width: 35px;
+  height: 50px;
 }
 .shop .item-section .colors .outer-dot:hover {
   background-color: transparent;
@@ -337,6 +356,9 @@
 .shop .item-section .colors .outer-dot.choosen {
   background-color: transparent;
   border: 1px solid #00dbff;
+  transform: skew(0deg, 0deg) scale(1.3, 1.3);
+  position: relative;
+  z-index: 10000;
 }
 .shop .service-section .title {
   padding-top: 20px;
@@ -346,25 +368,38 @@
   padding-bottom: 0px;
 }
 .shop .service-section .brands .brand-name-cont .brand-name.choosen {
-  text-decoration: underline;
-  color: #2379da;
+  background-color: #3899c6;
+  color: white;
 }
 .shop .service-section .brands .carousel {
   border-bottom: 1px solid #d7d2d2;
   padding-bottom: 10px;
 }
 .shop .service-section .brands .brand-name-cont {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .shop .service-section .brands .brand-name-cont .brand-name {
   text-align: center;
   font-weight: bold;
   text-transform: capitalize;
   color: #716767;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  transition: color 200ms linear, background-color 200ms linear;
+}
+.shop .service-section .brands .brand-name-cont .brand-name:hover {
+  background-color: #3899c6;
+  color: white;
+}
+.shop .service-section .services {
+  padding-top: 7px;
 }
 .shop .service-section .services .carousel .carousel-inner {
-  min-height: 480px;
+  min-height: 399px;
 }
 .shop .service-section .services .item-pair {
   border: 1px solid #ddcfcf;
@@ -372,6 +407,7 @@
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  color: gray;
 }
 .shop .service-section .services .item-pair:hover {
   border: 1px solid #3591f2;
@@ -379,6 +415,7 @@
 }
 .shop .service-section .services .choosen {
   border: 1px solid #3591f2;
+  color: #1ea9cf;
 }
 .shop .service-section .services #carousel-service {
   padding-top: 5px;
@@ -387,8 +424,12 @@
   min-height: 410px;
 }
 .shop .service-section .services .service-duration {
-  color: red;
+  margin: 0px;
+  font-size: 18px;
+  padding: 10px;
+  font-weight: bold;
   font-style: italic;
+  background-color: transparent;
 }
 .shop .service-section .services .service-slot {
   padding: 10px;
@@ -413,6 +454,11 @@ BODY {
 #accordion {
     box-shadow: 0px 2px 10px black;
 }
+
+.shop-main-row .limited-col-right {
+  border-right: 1px solid #afd8f2;
+}
+
 @media only screen and (max-width: 970px) {
 
       .card-header {
@@ -422,10 +468,25 @@ BODY {
          padding-right: 15px;
      }
      .limited-col-left {
-         padding-left: 15px;
+         padding-left: 15px;		
      }
+	 
+     .shop-main-row .limited-col-right {
+        border-right: 0px solid #afd8f2;
+     }	
+	 
+	 .details-container  .limited-col-right { 
+	   padding-top: 15px; 
+	 }
+	 .details-container	 .limited-col-left { 
+	   padding-top: 15px;  
+	 }
 }
 </style>
+
+
+</style>
+
 </head>
 
 
@@ -434,9 +495,11 @@ BODY {
 
 <script type="text/babel" 	src="js/src/data.js"></script>
 
+<script  >
 
+</script>
 
-<div class="footer_wrapper" style="color: black;text-align: center;margin-top:30px;">         
+<div class="footer_wrapper" style="color: black;text-align: center;margin-top:30px;color: red;font-weight: bold;">         
  <p class="footer" > <?php include 'php_template/footer.php'; echo "and Chris B" ?> </p> 
 <?php
 
@@ -505,7 +568,7 @@ BODY {
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">React.js + redux.js + bootstrap 4 + responsive</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">React.js + redux.js + bootstrap 4 + SASS + responsive</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -518,6 +581,7 @@ BODY {
 		<li>Image preloading before anything else.</li>
 		<li>Intergation of jquery's asynch timers for accordion open/close with react component's rendering and updating</li>
 		<li>There are 2 kinds of reducers using Redux.combineReducers. <br>One is for shop and the other for basket. <br>This increases perfomance and keep things separated</li>
+		<li>The purpose of this , is not to demonstrate an eye-candy interface using perfect color balance and symmetry, but a functional e-shop layout with the power of  SASS + React.js + redux.js + bootstrap 4</li>
 	   </ul>
 	   <b>Thank you for visiting</b>
       </div>

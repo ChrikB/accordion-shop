@@ -30,7 +30,6 @@ class Details extends React.Component {
     return (
 		   <div class={ 'row details-container' + isHiddenClass } >
 		     <div class="col-12  col-sm-12  col-md-12 col-lg-6 limited-col-right ">
-			   <h2 class='title'>Car</h2>
 			   <div class="row item-details">
 			      <div class="col-12  col-sm-12  col-md-12 col-lg-6">
 				    <img class="item-img" src={itemIMG}/>
@@ -73,7 +72,6 @@ class Details extends React.Component {
 			   </div>
              </div>
 			 <div class="col-sm-12 col-md-12 col-lg-6 limited-col-left ">
-			   <h2 class='title'>Package</h2>
 				<div class="row service-details">
 				  <div class="col-12  col-sm-12  col-md-12 col-lg-6"><img class="service-img" src={this.props.service.img}/></div>
 				  <div class="col-12  col-sm-12  col-md-12 col-lg-6">
@@ -115,7 +113,7 @@ class Details extends React.Component {
 				</div>
 			 </div>
 			 <div class="col-12  col-sm-12  col-md-12 col-lg-12 detail-button-col" >
-			   <button class="btn btn-info" onClick={this.openShop} >GoShop</button>
+			   <button class="btn btn-info" onClick={this.openShop} >Go Shop</button>
 			 </div>
 		   </div>
   	);	

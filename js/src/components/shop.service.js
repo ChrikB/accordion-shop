@@ -13,11 +13,7 @@ class Service extends React.Component {
 				    store.dispatch({ type: 'UPDATE_SELECTION', service: this.service, index: this.props.index});} 
 			}
 		>
-		  <h4>{this.service.name}</h4>
 		  <h5 class="service-duration">{this.service.duration + ' ' + this.service.pricePer + 's'}</h5>
-		  <div>
-			<span>Coefficient : </span><span>{this.service.price}</span>
-		  </div>
 		</div>
 	  </div>
 	);

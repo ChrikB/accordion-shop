@@ -1,5 +1,21 @@
 class ItemList extends React.Component {
   
+  
+  
+  componentDidMount() {
+    let id = '#collapseOnez' + this.props.index; 
+	  
+	$(id  + ' .items').eq(0).on("mouseenter",function(e){
+	  e.stopPropagation(); 
+      $(id  + ' .items .carousel-control-prev-icon1').removeClass("d-none"); 
+      $(id  + ' .items .carousel-control-next-icon1').removeClass("d-none");  	
+	});
+	$(id  + ' .items').eq(0).on("mouseleave",function(e){
+      $(id  + ' .items .carousel-control-prev-icon1').addClass("d-none"); 
+      $(id  + ' .items .carousel-control-next-icon1').addClass("d-none");  	    
+	});	  
+  }
+  
   groupThem(children,active) {	
   
     let cl =  active ? 'active' : '';
@@ -79,7 +95,7 @@ class ItemList extends React.Component {
 		  <div class="row">		  
     		<div class="col-2 col-sm-1 col-md-1  col-lg-1 align-self-center" >
     		  <a class={isHiddenClass + 'carousel-control-prev1'} href={'#' + carouselId} role="button" data-slide="prev">
-    		    <span class="carousel-control-prev-icon1 arrow-icon" aria-hidden="true" ></span>
+    		    <span class="carousel-control-prev-icon1 arrow-icon d-none" aria-hidden="true" ></span>
               </a>											
     		</div>	
 			<div class="col-8 col-sm-10 col-md-10  col-lg-10" >
@@ -87,7 +103,7 @@ class ItemList extends React.Component {
 			</div> 
     		<div class="col-2 col-sm-1 col-md-1 col-lg-1 align-self-center" >
     		  <a class={isHiddenClass + 'carousel-control-next1'} href={'#' + carouselId} role="button" data-slide="next" >
-    		    <span class="carousel-control-next-icon1 arrow-icon" aria-hidden="true"></span>
+    		    <span class="carousel-control-next-icon1 arrow-icon d-none" aria-hidden="true"></span>
               </a>					  					  
     		</div>			
 	      </div>

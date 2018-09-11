@@ -15,13 +15,13 @@ class Item extends React.Component {
 		onClick={ this.updateData }
 	  > 
 	    <div class="item-view">
+		  <div class="item-model text-center">{this.item.model}</div>
 	      <img 
 			src={' img/CARS/' + this.item.dir + '/' + this.item.dir +'.blue.svg'}
 			width="80" 
 			height="80"
 		    style={{ width: "100%" }}
 		  />
-		  <div class="item-model text-center">{this.item.model}</div>
 		</div>
 	  </div>
 	);

@@ -18,6 +18,11 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='RED' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
   } 
   
+  .item-section , 
+  .service-section { 
+     padding-top: 12px;  
+  } 
+  
   .item-section {   
 
     .title {
@@ -34,18 +39,30 @@
 	  }	 
 	  
 	  .brand-name-cont {	  
-	    padding-left: 50px;
-        padding-right: 50px;
+	    padding-left: 30px;
+        padding-right: 30px;
 		
 	    .brand-name {
           text-align: center;
           font-weight: bold;
           text-transform: capitalize;
-          color: #716767;				
+
+          border-radius: 5px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          background-color: #ffffff;
+          color: gray;
+          transition: color 200ms linear, background-color 200ms linear;
+          margin-left: 2px;
+          margin-right: 2px;		  
+		}
+		.brand-name:hover { 
+          background-color: #3899c6;
+          color: white;		
 		}
         .brand-name.choosen {
-          text-decoration: underline;
-          color: #2379da;
+          background-color: #3899c6;
+          color: white;
         } 	   		
 	  }	
 	  
@@ -75,8 +92,7 @@
 		padding-bottom: 5px;
 		height: 123px;
 		  .item-model {
-            font-weight: bold;
-            color: gray;
+            font-weight: bold;           
 			padding-top: 0px;
 		  }
 	  }
@@ -89,12 +105,14 @@
     	border-width: 0px;
         border-radius: 10px;
         padding: 2px;
+		color: gray;
       }
       .item-slot:hover {
         border: 0px solid rgba(0,0,0,0);
       }
       .item-slot.choosen {     
-        border: 0px solid #3591f2;     
+        border: 0px solid #3591f2;
+		color: #1ea9cf;
       }
       .item-slot.choosen .item-view {      
         border: 1px solid #3591f2;      
@@ -148,19 +166,22 @@
           MARGIN: AUTO;		  
 		}
 	  }
-      .outer-dot {
-         height: 35px;
-         width: 35px;
-         border-radius: 50%;
-      	 background-color: transparent;
-      	 border: 1px solid rgba(0,0,0,0);
-         .dot {
-             height: 25px;
-             width: 25px;
-             border-radius: 50%;
+      .outer-dot {		 
+         border-radius: 0px;
+         background-color: transparent;
+         border: 1px solid rgba(0, 0, 0, 0);
+         transform: skew(-20deg,0deg);
+         padding: 0px;
+         transform: skew(20deg,0deg);
+         width: 35px;	
+         height: 50px;		 	 
+         .dot {			 
+             border-radius: 0px;
              display: inline-block;
              MARGIN: AUTO;
              border: 2px solid #4d4b4b;
+             width: 35px;
+             height: 50px;			 			 
          }	 
       }	
       .outer-dot:hover {
@@ -171,6 +192,9 @@
       .outer-dot.choosen {
          background-color: transparent;
          border: 1px solid #00dbff;
+         transform: skew(0deg,0deg) scale(1.3,1.3);
+         position: relative;
+         z-index: 10000;		 
       }		  
 	}
 	
@@ -188,36 +212,50 @@
 	  padding-bottom: 0px;
 	  
       .brand-name-cont .brand-name.choosen {
-        text-decoration: underline;
-        color: #2379da;
+        background-color: #3899c6;
+        color: white;	
       }	   
 	  .carousel {
 	    border-bottom: 1px solid #d7d2d2;
 		padding-bottom: 10px;
 	  }	 	  
 	  .brand-name-cont {	  
-	    padding-left: 50px;
-        padding-right: 50px;		
+	    padding-left: 30px;
+        padding-right: 30px;		
 	      .brand-name {
             text-align: center;
             font-weight: bold;
             text-transform: capitalize;
             color: #716767;				
-		  }		
+            padding-top: 5px;
+            padding-bottom: 5px;
+			border-radius: 5px;
+            margin-left: 2px;
+            margin-right: 2px;
+			transition: color 200ms linear, background-color 200ms linear;
+		  }	
+		  .brand-name:hover {
+            background-color: #3899c6;
+            color: white;
+          }
 	  }		  
 	}
     .services {	
+	
+	  padding-top: 7px;
+	  
 	  .carousel {
 	    .carousel-inner {
-		  min-height: 480px;
+		  min-height: 399px;
 		}
 	  }
       .item-pair {
-          border: 1px solid #ddcfcf;
-          border-radius: 10px;
-          text-align: center;
-          padding-top: 5px;
-          padding-bottom: 5px;
+        border: 1px solid #ddcfcf;
+        border-radius: 10px;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+		color: gray;
       }	  
       .item-pair:hover {
         border: 1px solid #3591f2;
@@ -226,6 +264,7 @@
 	  
       .choosen {
         border: 1px solid #3591f2;
+		color: #1ea9cf;
       }  	
       #carousel-service { 
   	    padding-top: 5px;
@@ -234,9 +273,13 @@
           min-height: 410px;
         }		  
   	  }	
-      .service-duration {
-        color: red;
-        font-style: italic;
+      .service-duration {		
+        margin: 0px;
+        font-size: 18px;
+        padding: 10px;
+        font-weight: bold;
+        font-style: italic; 
+        background-color: transparent;  				
       }
       .service-slot {
         padding: 10px;

@@ -448,5 +448,101 @@ let services = [
 	  contactBreakable : 'yes',
 	  fuelOffers: 'yes'  
     } 
-  }   
+  },
+  { 
+    id: 11,	  
+    name: 'package ΚΚ', 
+	duration: 3, 
+	price: 0.008, 
+	pricePer: 'year',
+	type: 'full', 
+	props: {
+	  fireInsurance: 'yes',
+	  theftInsurance: 'yes',
+	  damageInsurance: 'yes',
+	  accidentProtection: 'yes',
+	  contactBreakable : 'yes',
+	  fuelOffers: 'yes'  
+    } 
+  },
+  { 
+    id: 12,	  
+    name: 'package ΚL', 
+	duration: 5, 
+	price: 0.009, 
+	pricePer: 'year',
+	type: 'full', 
+	props: {
+	  fireInsurance: 'yes',
+	  theftInsurance: 'yes',
+	  damageInsurance: 'yes',
+	  accidentProtection: 'yes',
+	  contactBreakable : 'yes',
+	  fuelOffers: 'yes'  
+    } 
+  },
+  { 
+    id: 13,	  
+    name: 'package MM', 
+	duration: 4, 
+	price: 0.008, 
+	pricePer: 'year',
+	type: 'full', 
+	props: {
+	  fireInsurance: 'yes',
+	  theftInsurance: 'yes',
+	  damageInsurance: 'no',
+	  accidentProtection: 'yes',
+	  contactBreakable : 'yes',
+	  fuelOffers: 'yes'  
+    } 
+  },
+  { 
+    id: 14,	  
+    name: 'package WW', 
+	duration: 7, 
+	price: 0.005, 
+	pricePer: 'month',
+	type: 'winter',  
+	props: {
+	  fireInsurance: 'yes',
+	  theftInsurance: 'no',
+	  damageInsurance: 'yes',
+	  accidentProtection: 'yes',
+	  contactBreakable : 'no',
+	  fuelOffers: 'no'  
+    } 
+  },
+  { 
+    id: 15,	  
+    name: 'package WI', 
+	duration: 6, 
+	price: 0.006, 
+	pricePer: 'month',
+	type: 'winter',  
+	props: {
+	  fireInsurance: 'no',
+	  theftInsurance: 'yes',
+	  damageInsurance: 'yes',
+	  accidentProtection: 'yes',
+	  contactBreakable : 'no',
+	  fuelOffers: 'yes'    
+    } 
+  },
+  { 
+    id: 16,	  
+    name: 'package XX', 
+	duration: 2, 
+	price: 0.007, 
+	pricePer: 'month',
+	type: 'summer',  
+	props: {
+	  fireInsurance: 'yes',
+	  theftInsurance: 'yes',
+	  damageInsurance: 'yes',
+	  accidentProtection: 'yes',
+	  contactBreakable : 'no',
+	  fuelOffers: 'yes'    
+    } 
+  }       
 ];

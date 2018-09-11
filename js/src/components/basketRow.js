@@ -66,10 +66,7 @@ class BasketRow extends React.Component {
 			>		     
                <div class="col-12 col-sm-6  col-md-6  col-lg-6 limited-col-right" >
   			      <div class="row item">
-  				     <div class="col-sm-1  col-md-1  col-lg-1 d-none d-sm-none d-md-none d-lg-block" >
-  					   <span class="row-basket-icon fa fa-circle-o-notch" aria-hidden="true" ></span>
-  					 </div>
-                       <div class="col-12 col-sm-12  col-md-12  col-lg-6" >
+                       <div class="col-12 col-sm-12  col-md-12  col-lg-7" >
   					   <img class={"item-img" + ' ' + isHiddenImg } src={itemIMG} />
   					   <span class="item-name" style={{paddingLeft: paddingLeft}}>{this.props.item.model || '** No selection **' }</span>
   					 </div>
